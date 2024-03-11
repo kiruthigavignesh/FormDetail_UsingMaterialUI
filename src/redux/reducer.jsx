@@ -2,7 +2,10 @@ const initialState = {
   formData: {
     firstName: '',
     lastName: '',
-
+address1:'',
+address2:'',
+country: "",
+state: "",
     email: '',
     password:'',
   },

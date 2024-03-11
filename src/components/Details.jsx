@@ -10,7 +10,7 @@ const NextFormPage = () => {
 
   return (
   <>
-      <h2>Form Data</h2>
+      <h2>Check Details</h2>
       <TableContainer component={Paper}>
         <Table aria-label="form data table">
           <TableBody>
@@ -22,42 +22,40 @@ const NextFormPage = () => {
               <TableCell>LastName:</TableCell>
               <TableCell>{formData && formData.lastName}</TableCell>
             </TableRow>
-            <TableRow>
-              <TableCell>Password:</TableCell>
-              <TableCell>{formData && formData.password}</TableCell>
-            </TableRow>
+           
             <TableRow>
               <TableCell>Email:</TableCell>
               <TableCell>{formData && formData.email}</TableCell>
             </TableRow>
             <TableRow>
+              <TableCell>Phone Number:</TableCell>
+              <TableCell>{formData&& formData.phone}</TableCell>
+            </TableRow>
+            <TableRow>
               <TableCell>Country:</TableCell>
-              <TableCell>{formData2 && formData2.country}</TableCell>
+              <TableCell>{formData && formData.country}</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>State:</TableCell>
-              <TableCell>{formData2 && formData2.state}</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Address 1:</TableCell>
-              <TableCell>{formData2 && formData2.address1}</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Address 2:</TableCell>
-              <TableCell>{formData2 && formData2.address2}</TableCell>
+              <TableCell>{formData && formData.state}</TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Pincode:</TableCell>
-              <TableCell>{formData2 && formData2.pincode}</TableCell>
+              <TableCell>{formData && formData.pincode}</TableCell>
             </TableRow>
+            <TableRow>
+              <TableCell>Address 1:</TableCell>
+              <TableCell>{formData && formData.address1}</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Address 2:</TableCell>
+              <TableCell>{formData&& formData.address2}</TableCell>
+            </TableRow>
+           
           </TableBody>
         </Table>
       </TableContainer>
-      <Link to="/" >
-      <Button variant="contained" disableElevation sx={{ mt: 3, mb: 2 }} >
-Back    
-</Button>
-      </Link>
+      
       </>
   );
 };

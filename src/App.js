@@ -10,6 +10,8 @@ import AdditionalForm from './components/AdditionalDetails';
  import "./App.css";
 
 import NextFormPage from './components/Details';
+import Navbar from './components/newuser/Navbar';
+import Message from './components/message';
 const App = () => {
   return (
     <Provider store={store}>
@@ -17,11 +19,13 @@ const App = () => {
       <div>
           <Routes>
 
-             <Route path="/" element={<Form />} />
-
+            
+             <Route path="/" element={<Navbar />} />
+             <Route path="/form" element={<Form />} /> 
           <Route path="/nextform" element={<AdditionalForm />} />
           
             <Route path="/details" element={<NextFormPage/>} />
+            <Route path="/message" element={<Message/>} />
 
           </Routes>
 
